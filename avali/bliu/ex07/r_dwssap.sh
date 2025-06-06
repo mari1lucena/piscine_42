@@ -1,0 +1,1 @@
+sed '/^#/d' /etc/passwd | sed -n '2~2p' | cut -d: -f1 | rev | sed -n "${FT_LINE1},${FT_LINE2}p" | sort -r | tr '\n' ', ' | sed 's/,$/\./'
